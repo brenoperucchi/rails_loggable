@@ -2,7 +2,8 @@ Rails Loggable
 ==============
 
 Create Logs of changes of ActiveRecord in any model you need.
-** This Gem is not already tested and I accept help
+
+** Gem isn't tested and I accept help
 
 Log:
 
