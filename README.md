@@ -6,22 +6,21 @@ Create Logs of changes of ActiveRecord in any model you need.
 Log:
 
 USER                           DESCRIPTION                                        DATE
-admin ID: 1 - Model Debit Create State:                               2013-11-20 20:09:41 UTC
-admin ID: 1 - Model Debit changed: State: canceled TO State: pending  2013-11-20 20:09:41 UTC
-user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20 20:09:41 UTC
+`admin ID: 1 - Model Debit Create State:                               2013-11-20 20:09:41 UTC`
+`admin ID: 1 - Model Debit changed: State: canceled TO State: pending  2013-11-20 20:09:41 UTC`
+`user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20 20:09:41 UTC`
+
 
 ## Compatibility
 Only Rails 4
 
-* I will test with Rails 3
-
+* I'll test with Rails 3 another time
 This is not similar proejct os PaperTrail and Auditable. It's only to create a register in Model LOG of changes 
-
 ## Installation 
 
-1. Add `PaperTrail` to your `Gemfile`.
+1. Add `RailsLoggable` to your `Gemfile`.
 
-    `gem 'rails_loggable'`
+    `gem 'rails_loggable' git: 'https://github.com/bperucchi/rails_loggable.git'`
 
 2. You need to create Model LOG
 
