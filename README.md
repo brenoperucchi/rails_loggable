@@ -5,7 +5,7 @@ Create Logs of changes of ActiveRecord in any model you need.
 
 Log:
 
-USER                           DESCRIPTION                                        DATE
+'USER                           DESCRIPTION                                        DATE'
 `admin ID: 1 - Model Debit Create State:                               2013-11-20 20:09:41 UTC`
 `admin ID: 1 - Model Debit changed: State: canceled TO State: pending  2013-11-20 20:09:41 UTC`
 `user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20 20:09:41 UTC`
@@ -24,16 +24,16 @@ This is not similar proejct os PaperTrail and Auditable. It's only to create a r
 
 2. You need to create Model LOG
 
-    `class CreateLogs < ActiveRecord::Migration
-      def change
-        create_table :logs do |t|
-          t.string :description
-          t.references :user
-          t.references :loggable, :polymorphic => true
-          t.timestamps
-        end
-      end
-    end`
+    `class CreateLogs < ActiveRecord::Migration'
+      `def change'
+        `create_table :logs do |t|`
+          `t.string :description`
+          `t.references :user`
+          `t.references :loggable, :polymorphic => true`
+          `t.timestamps`
+        `end`
+      `end`
+    `end`
 
 3. Run the migration.
 
