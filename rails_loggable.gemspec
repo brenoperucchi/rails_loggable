@@ -8,10 +8,11 @@ Gem::Specification.new do |s|
   s.name        = "rails_loggable"
   s.version     = RailsLoggable::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Breno Perucchi, Coo-Author: Vinicius Horeciz"]
+  s.authors     = ["Breno Perucchi", "Co-Author: Vinicius Horeciz"]
   s.email       = ["bperucchi@gmail.com"]
   s.summary     = "Track changes of activerecord and generate a history"
-  s.description = ""
+  s.description = s.summary
+  s.license     = 'MIT'
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
