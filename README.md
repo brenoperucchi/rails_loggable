@@ -26,8 +26,8 @@ This is not similar proejct os PaperTrail and Auditable. It's only to create a r
 2. You need to create Model LOG
 
 
-    `class CreateLogs < ActiveRecord::Migration'
-      `def change'
+    `class CreateLogs < ActiveRecord::Migration`
+      `def change`
         `create_table :logs do |t|`
           `t.string :description`
           `t.references :user`
