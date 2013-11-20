@@ -48,7 +48,6 @@ This is not similar proejct os PaperTrail and Auditable. It's only to create a r
     en:
       rails_loggable:
         loggable_changed: "ID: %{id} - %{model} changed: %{before} TO %{after}"
-        ```
 
 * recommend to create in your Rails APP/config/locale/en.railsloggable.yml
 
