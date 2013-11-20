@@ -19,6 +19,7 @@ user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20
 
 * I'll test with Rails 3 another time
 * This is not similar project as Paper Trail and Auditable. Only provide the way to create a register in Model LOG of the changes the attributes
+
 ## Installation 
 
 1. Add `RailsLoggable` to your `Gemfile`.
