@@ -34,7 +34,7 @@ module RailsLoggable
 
         def i18n_description(klass, *params)
           message, before, after = *params
-          attrs  = if message = :loggable_update
+          attrs  = if message == :loggable_update
                       {model: klass.class.name.to_underscore, :before => before.join(', '), :after => after.join(', '),
                       scope:[:rails_loggable]} 
                     else
