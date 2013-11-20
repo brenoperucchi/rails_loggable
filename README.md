@@ -44,9 +44,10 @@ This is not similar proejct os PaperTrail and Auditable. It's only to create a r
     `bundle exec rake db:migrate`
 
 4. You need to put in you locale this:
-    `en:
+    ```YML
+    en:
       rails_loggable:
-        loggable_changed: "ID: %{id} - %{model} changed: %{before} TO %{after}"`
+        loggable_changed: "ID: %{id} - %{model} changed: %{before} TO %{after}"```
 
 * recommend to create in your Rails APP/config/locale/en.railsloggable.yml
 
