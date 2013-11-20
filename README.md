@@ -2,6 +2,7 @@ rails_loggable
 ==============
 
 Create Logs of changes of ActiveRecord in any model you need.
+** This Gem is not already tested and I accept help
 
 Log:
 
@@ -25,17 +26,18 @@ This is not similar proejct os PaperTrail and Auditable. It's only to create a r
 
 2. You need to create Model LOG
 
-
-    `class CreateLogs < ActiveRecord::Migration`
-      `def change`
-        `create_table :logs do |t|`
-          `t.string :description`
-          `t.references :user`
-          `t.references :loggable, :polymorphic => true`
-          `t.timestamps`
-        `end`
-      `end`
-    `end`
+    ```ruby 
+    class CreateLogs < ActiveRecord::Migration
+      def change
+        create_table :logs do |t|
+          t.string :description
+          t.references :user
+          t.references :loggable, :polymorphic => true
+          t.timestamps
+        end
+      end
+    end
+    ```
 
 3. Run the migration.
 
@@ -47,5 +49,23 @@ This is not similar proejct os PaperTrail and Auditable. It's only to create a r
         loggable_changed: "ID: %{id} - %{model} changed: %{before} TO %{after}"`
 
 * recommend to create in your Rails APP/config/locale/en.railsloggable.yml
+
+## Basic Usage
+
+```ruby
+class Debit < ActiveRecord::Base
+  rails_loggable
+end
+```
+
+## Options
+```ruby
+class Debit < ActiveRecord::Base
+  rails_loggable :ignore => [:updated_at, :created_at], :log_attributes => :id
+end
+```
+
+`ignore =>` will ignore the attributes to the description log 
+`log_attributes =>` will add to the attribute to the description log
 
 This project rocks and uses MIT-LICENSE.
