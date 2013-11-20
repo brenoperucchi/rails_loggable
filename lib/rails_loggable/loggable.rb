@@ -6,9 +6,7 @@ module RailsLoggable
     end
 
     module ClassMethods
-
       def loggable(options = {})
-
         send :include, InstanceMethods
 
         class_attribute :loggable_class_name
@@ -34,15 +32,19 @@ module RailsLoggable
         has_many self.loggable_association_name,
           :class_name => self.loggable_class_name, :as => :loggable
 
-        def log_attributes(klass, before, after)
-          attrs  = {model: klass.class.name.to_underscore, :before => before.join(', '), :after => after.join(', '),
-                    scope:[:rails_loggable]}
+        def i18n_description(klass, *params)
+          message, before, after = *params
+          attrs  = if message = :loggable_update
+                      {model: klass.class.name.to_underscore, :before => before.join(', '), :after => after.join(', '),
+                      scope:[:rails_loggable]} 
+                    else
+                      {model: klass.class.name.to_underscore, scope:[:rails_loggable]}
+                    end
           loggable_options[:log_attributes].each do |k|
-          attrs.merge!(k => klass.send(loggable_options_log_attributes[k]))
+            attrs.merge!(k => klass.send(loggable_options_log_attributes[k]))
           end
-          I18n.t(:loggable_changed, attrs)
+          I18n.t(message, attrs)
         end
-
       end
     end
 
@@ -58,12 +60,12 @@ module RailsLoggable
               before << "#{attribute_t}: #{changes[attr].first}"
               after << "#{attribute_t}: #{changes[attr].second}"
             end
-            Log.logger(self, self.class.log_attributes(self, before, after))
+            Log.logger(self, self.class.i18n_description(self, :loggable_update, before, after))
           end
       end
 
       def loggable_create
-        Log.logger(self, I18n.t(:loggable_created))
+        Log.logger(self, :loggable_create)
       end
     end
   end

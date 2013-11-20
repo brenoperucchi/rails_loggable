@@ -9,7 +9,7 @@ Log:
 
 ```HTML
 USER                           DESCRIPTION                                        DATE
-admin ID: 1 - Model Debit Create State:                               2013-11-20 20:09:41 UTC
+admin ID: 1 - Model Debit created State:                               2013-11-20 20:09:41 UTC
 admin ID: 1 - Model Debit changed: State: canceled TO State: pending  2013-11-20 20:09:41 UTC
 user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20 20:09:41 UTC
 ```
@@ -21,6 +21,10 @@ user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20
 
 This is not similar project as Paper Trail and Auditable. Only provide the way to create a register in Model LOG of the changes the attributes
 
+## Requirement 
+
+  > Devise 3 - https://github.com/bokmann/sentient_user
+  > SentientUser - https://github.com/bokmann/sentient_user
 
 ## Installation 
 
