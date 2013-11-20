@@ -65,7 +65,7 @@ module RailsLoggable
       end
 
       def loggable_create
-        Log.logger(self, :loggable_create)
+        Log.logger(self, self.class.i18n_description(self, :loggable_create))
       end
     end
   end
