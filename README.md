@@ -66,7 +66,7 @@ class Debit < ActiveRecord::Base
 end
 ```
 
-`ignore =>` will ignore the attributes to the description log 
-`log_attributes =>` will add to the attribute to the description log
+> `ignore =>` will ignore the attributes to the description log 
+> `log_attributes =>` will add to the attribute to the description log
 
 This project rocks and uses MIT-LICENSE.
