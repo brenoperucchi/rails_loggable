@@ -24,6 +24,7 @@ This is not similar project as Paper Trail and Auditable. Only provide the way t
 ## Requirement 
 
   > Devise 3 - https://github.com/bokmann/sentient_user
+  
   > SentientUser - https://github.com/bokmann/sentient_user
 
 ## Installation 
