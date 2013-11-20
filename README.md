@@ -6,12 +6,12 @@ Create Logs of changes of ActiveRecord in any model you need.
 
 Log:
 
-`USER                           DESCRIPTION                                        DATE`
-
-`admin ID: 1 - Model Debit Create State:                               2013-11-20 20:09:41 UTC`
-`admin ID: 1 - Model Debit changed: State: canceled TO State: pending  2013-11-20 20:09:41 UTC`
-`user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20 20:09:41 UTC`
-
+```HTML
+USER                           DESCRIPTION                                        DATE
+admin ID: 1 - Model Debit Create State:                               2013-11-20 20:09:41 UTC
+admin ID: 1 - Model Debit changed: State: canceled TO State: pending  2013-11-20 20:09:41 UTC
+user  ID: 1 - Model Credit changed: State: canceled TO State: paid    2013-11-20 20:09:41 UTC
+```
 
 ## Compatibility
 Only Rails 4
