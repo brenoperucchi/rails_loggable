@@ -85,7 +85,7 @@ end
 
 If you make improvements to this application, please share with others.
 
-Send the author a message, create an "issues":https://github.com/bperucchi/rails_loggable/issues , or fork the project and submit a pull request.
+Send the author a message, create an [issue](https://github.com/bperucchi/rails_loggable/issues), or fork the project and submit a pull request.
 
 If you want partcipate please, let me know bperucchi@gmail.com
 
