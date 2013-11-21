@@ -26,6 +26,7 @@ module RailsLoggable
         end
 
         before_update :loggable_update
+        before_destroy :loggable_destroy
         after_create :loggable_create
 
         #Active ActiveRecord to Plugin
@@ -67,6 +68,11 @@ module RailsLoggable
       def loggable_create
         Log.logger(self, self.class.i18n_description(self, :loggable_create))
       end
+
+      def loggable_destroy
+        Log.logger(self, self.class.i18n_description(self, :loggable_destroy))
+      end
+      
     end
   end
 end

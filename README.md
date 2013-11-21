@@ -58,6 +58,7 @@ This is not similar project as Paper Trail and Auditable. Only provide the way t
       rails_loggable:
         loggable_update: "ID: %{id} - %{model} changed: %{before} TO %{after}"
         loggable_create: "ID %{id} - %{model} created" 
+        loggable_destroy: "Id: %{id} - %{model} created" 
 
 * recommend to create in your Rails APP/config/locale/en.railsloggable.yml
 
