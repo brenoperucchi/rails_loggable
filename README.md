@@ -81,4 +81,12 @@ end
 
 `log_attributes =>` will add to the attribute to the description log
 
+## CONTRIBUTING
+
+If you make improvements to this application, please share with others.
+
+Send the author a message, create an * "issues":https://github.com/bperucchi/rails_loggable/issues , or fork the project and submit a pull request.
+
+If you want partcipate please, let me know bperucchi@gmail.com
+
 This project rocks and uses MIT-LICENSE.
